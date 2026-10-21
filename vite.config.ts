@@ -12,6 +12,8 @@ export default defineConfig({
     tailwindcss(),
     VitePWA({
       registerType: 'autoUpdate',
+      // Registered manually in src/pwa.ts so we can poll for updates
+      injectRegister: false,
       includeAssets: ['favicon.svg'],
       manifest: {
         name: 'Pet Trainer',
@@ -39,6 +41,9 @@ export default defineConfig({
       workbox: {
         globPatterns: ['**/*.{js,css,html,ico,png,svg,woff2}'],
         navigateFallback: `${base}index.html`,
+        cleanupOutdatedCaches: true,
+        clientsClaim: true,
+        skipWaiting: true,
       },
     }),
   ],
