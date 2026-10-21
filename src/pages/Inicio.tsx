@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { InstallPwaButton } from '../components/InstallPwaButton'
 import { markAppEntered } from '../lib/session'
 
 export function InicioPage() {
@@ -38,6 +39,10 @@ export function InicioPage() {
         >
           Entrar
         </button>
+
+        <div className="inicio-cta mt-4 flex w-full justify-center">
+          <InstallPwaButton />
+        </div>
       </div>
     </div>
   )
