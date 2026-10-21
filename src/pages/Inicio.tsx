@@ -1,5 +1,4 @@
 import { useNavigate } from 'react-router-dom'
-import { BackupPanel } from '../components/BackupPanel'
 import { markAppEntered } from '../lib/session'
 
 export function InicioPage() {
@@ -39,10 +38,6 @@ export function InicioPage() {
         >
           Entrar
         </button>
-
-        <div className="inicio-cta mt-8 w-full max-w-sm">
-          <BackupPanel />
-        </div>
       </div>
     </div>
   )
